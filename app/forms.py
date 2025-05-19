@@ -19,7 +19,7 @@ class StudentForm(forms.ModelForm):
             "department": forms.TextInput(
                 attrs={"class": "form-control", "placeholder": "Enter your department"}
             ),
-            "address": forms.TextInput(
+            "city": forms.TextInput(
                 attrs={"class": "form-control", "placeholder": "Enter your address"}
             ),
             "phone": forms.TextInput(

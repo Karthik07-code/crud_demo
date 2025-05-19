@@ -11,7 +11,7 @@ class Student(models.Model):
     department = models.CharField(
         max_length=50, default="BCA"
     )
-    address = models.CharField(
+    city = models.CharField(
         max_length=100,
     )
     phone = models.CharField(

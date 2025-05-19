@@ -9,7 +9,7 @@ class StudentAdmin(admin.ModelAdmin):
         "name",
         "dob",
         "department",
-        "address",
+        "city",
         "phone",
     )
 
