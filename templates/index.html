@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Details</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="{% static 'css/read.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Student Management System</h1>
+
+      <table class="table table-bordered table-hover text-center">
+        <thead class="table-dark">
+          <tr>
+            <th>RegNo</th>
+            <th>Name</th>
+            <th>DOB</th>
+            <th>Department</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Update</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for data in table_datas %}
+          <tr>
+            <td>{{ data.regno }}</td>
+            <td>{{ data.name }}</td>
+            <td>{{ data.dob }}</td>
+            <td>{{ data.department }}</td>
+            <td>{{ data.address }}</td>
+            <td>{{ data.phone }}</td>
+            <td>
+              <a href="update/{{ data.id }}" class="btn btn-warning">Update</a>
+            </td>
+            <td>
+              <a href="delete/{{ data.id }}" class="btn btn-danger">Delete</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <a href="create" class="btn btn-success mt-4 d-block mx-auto w-50">
+        + Add New Student
+      </a>
+    </div>
+  </body>
+</html>
