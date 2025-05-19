@@ -11,10 +11,17 @@ class StudentForm(forms.ModelForm):
                 attrs={"class": "form-control", "placeholder": "Enter your regno"}
             ),
             "name": forms.TextInput(
-                attrs={"class": "form-control", "placeholder": "Enter your name"}
+                attrs={
+                    "class": "form-control",
+                    "placeholder": "Enter your name",
+                }
             ),
             "dob": forms.DateInput(
-                attrs={"class": "form-control", "placeholder": "Enter your dob"}
+                attrs={
+                    "class": "form-control",
+                    "placeholder": "Enter your dob",
+                    "type": "date",
+                }
             ),
             "department": forms.TextInput(
                 attrs={"class": "form-control", "placeholder": "Enter your department"}

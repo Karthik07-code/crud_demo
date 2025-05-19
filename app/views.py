@@ -13,9 +13,9 @@ def create_view(request):
     form = StudentForm()
     if request.method == "POST":
         # This below line creates a form instance using the data the user submitted.
-        forms = StudentForm(request.POST)
-        if forms.is_valid():
-            forms.save()
+        form = StudentForm(request.POST)
+        if form.is_valid():
+            form.save()
             return redirect("/")
     return render(request, "create.html", {"std_form": form})
 """
