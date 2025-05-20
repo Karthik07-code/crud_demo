@@ -27,7 +27,7 @@ class StudentForm(forms.ModelForm):
                 attrs={"class": "form-control", "placeholder": "Enter your department"}
             ),
             "city": forms.TextInput(
-                attrs={"class": "form-control", "placeholder": "Enter your address"}
+                attrs={"class": "form-control", "placeholder": "Enter your city"}
             ),
             "phone": forms.TextInput(
                 attrs={"class": "form-control", "placeholder": "Enter your phone"}

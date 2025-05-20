@@ -15,43 +15,45 @@
     <link rel="stylesheet" href="{% static 'css/read.css' %}" />
   </head>
   <body>
-    <div class="container">
+    <div class="container py-4">
       <h1>Student Management System</h1>
 
-      <table class="table table-bordered table-hover text-center">
-        <thead class="table-dark">
-          <tr>
-            <th>RegNo</th>
-            <th>Name</th>
-            <th>DOB</th>
-            <th>Department</th>
-            <th>City</th>
-            <th>Phone</th>
-            <th>Update</th>
-            <th>Delete</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for data in table_datas %}
-          <tr>
-            <td>{{ data.regno }}</td>
-            <td>{{ data.name }}</td>
-            <td>{{ data.dob }}</td>
-            <td>{{ data.department }}</td>
-            <td>{{ data.city }}</td>
-            <td>{{ data.phone }}</td>
-            <td>
-              <a href="update/{{ data.id }}" class="btn btn-warning">Update</a>
-            </td>
-            <td>
-              <a href="delete/{{ data.id }}" class="btn btn-danger">Delete</a>
-            </td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover text-center">
+          <thead class="table-dark">
+            <tr>
+              <th>RegNo</th>
+              <th>Name</th>
+              <th>DOB</th>
+              <th>Department</th>
+              <th>City</th>
+              <th>Phone</th>
+              <th>Update</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for data in table_datas %}
+            <tr>
+              <td>{{ data.regno }}</td>
+              <td>{{ data.name }}</td>
+              <td>{{ data.dob }}</td>
+              <td>{{ data.department }}</td>
+              <td>{{ data.city }}</td>
+              <td>{{ data.phone }}</td>
+              <td>
+                <a href="update/{{ data.id }}" class="btn btn-warning btn-sm">Update</a>
+              </td>
+              <td>
+                <a href="delete/{{ data.id }}" class="btn btn-danger btn-sm">Delete</a>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
 
-      <a href="create" class="btn btn-success mt-4 d-block mx-auto w-50">
+      <a href="create" class="btn btn-success mt-4 d-block mx-auto w-100 w-md-50">
         + Add New Student
       </a>
     </div>

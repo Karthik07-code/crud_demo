@@ -58,3 +58,25 @@ textarea.form-control:focus {
   border-color: #198754 !important;
   box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25) !important;
 }
+
+@media (max-width: 576px) {
+  .form-container {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  button.btn-success {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  form input,
+  form select,
+  form textarea {
+    font-size: 14px;
+  }
+}
