@@ -8,9 +8,7 @@ class Student(models.Model):
         max_length=100,
     )
     dob = models.DateField()
-    department = models.CharField(
-        max_length=50, default="BCA"
-    )
+    department = models.CharField(max_length=50, default="BCA")
     city = models.CharField(
         max_length=100,
     )
