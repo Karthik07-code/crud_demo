@@ -1,0 +1,47 @@
+body {
+  background: #f4f7fa;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.btn-success {
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 10px;
+  font-weight: 500;
+  color: #131212;
+}
+
+.btn-success:hover {
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.1s ease;
+}
+
+/* Wraps long table on small screens */
+.table-responsive {
+  overflow-x: auto;
+}
+
+/* Adjust styles on small devices */
+@media (max-width: 576px) {
+  table th,
+  table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
