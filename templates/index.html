@@ -42,10 +42,10 @@
               <td>{{ data.city }}</td>
               <td>{{ data.phone }}</td>
               <td>
-                <a href="update/{{ data.id }}" class="btn btn-warning btn-sm">Update</a>
+                <a href="{% url "update" data.id %}" class="btn btn-warning btn-sm">Update</a>
               </td>
               <td>
-                <a href="delete/{{ data.id }}" class="btn btn-danger btn-sm">Delete</a>
+                <a href="{% url "delete" data.id  %}" class="btn btn-danger btn-sm">Delete</a>
               </td>
             </tr>
             {% endfor %}
@@ -53,7 +53,7 @@
         </table>
       </div>
 
-      <a href="create" class="btn btn-success mt-4 d-block mx-auto w-100 w-md-50">
+      <a href="{% url "create" %}" class="btn btn-success mt-4 d-block mx-auto w-100 w-md-50">
         + Add New Student
       </a>
     </div>
