@@ -18,6 +18,8 @@ def create_view(request):
             form.save()
             return redirect("/")
     return render(request, "create.html", {"std_form": form})
+
+
 """
 Final Analogy for def create_view():
 
