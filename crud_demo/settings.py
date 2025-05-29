@@ -29,7 +29,9 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "fallback-secret-key")
 DEBUG = False
 
 
-ALLOWED_HOSTS = ["sms-django-qyyi.onrender.com', '127.0.0.1', 'localhost']"]
+ALLOWED_HOSTS = ["sms-django-qyyi.onrender.com", "127.0.0.1", "localhost"]
+
+CSRF_TRUSTED_ORIGINS = ["https://sms-django-qyyi.onrender.com"]
 
 
 # Application definition
