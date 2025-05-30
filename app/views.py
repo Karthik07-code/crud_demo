@@ -33,14 +33,14 @@ render(...)	                        Showing the form with entered details to the
 # flow chart : User Fills Form ➝ Submits ➝ Django Validates ➝ Saves to DB ➝ Redirect
 
 
-def delete_view(request, id):
-    student_datas = Student.objects.get(id=id)
+def delete_view(request, regno):
+    student_datas = Student.objects.get(regno=regno)
     student_datas.delete()
     return redirect("/")
 
 
-def update_view(request, id):
-    student_datas = Student.objects.get(id=id)
+def update_view(request, regno):
+    student_datas = Student.objects.get(regno=regno)
     if request.method == "POST":
         form = StudentForm(request.POST, instance=student_datas)
         if form.is_valid():

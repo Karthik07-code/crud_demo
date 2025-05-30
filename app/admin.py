@@ -4,7 +4,6 @@ from .models import Student
 
 class StudentAdmin(admin.ModelAdmin):
     list_display = (
-        "id",
         "regno",
         "name",
         "dob",
